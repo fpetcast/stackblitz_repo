@@ -1,6 +1,7 @@
 // Import stylesheets
 import "./style.css";
-var first;
+var first = document.getElementById("first");
+var second = document.getElementById("second");
 
 // Write Javascript code!
 class figure {
@@ -14,12 +15,11 @@ var apple = new figure("apple", "red");
 apple.taste = "good";
 var banana = new figure("banana", "yellow");
 function display(obj) {
-  first = document.getElementById("first");
   var txt = " ";
   for (var x in obj) {
     txt += obj[x] + " ";
   }
-  return (first.innerHTML = txt);
+  return txt;
 }
 
-window.onload = display(banana);
+window.onload = first.innerHTML = display(banana);
